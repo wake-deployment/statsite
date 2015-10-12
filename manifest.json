@@ -5,7 +5,7 @@
     "nathan.herald@microsoft.com"
   ],
   "compile": [
-    "cp /opt/src/statsite.d /opt/app/",
+    "cp -R /opt/src/statsite.d /opt/app/",
     "cd /opt/src/statsite/ && make && cp ./statsite /opt/app/",
     "mkdir /opt/app/sinks && cp /opt/src/statsite/sinks/* /opt/app/sinks/"
   ],
