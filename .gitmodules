@@ -1,0 +1,3 @@
+[submodule "statsite"]
+	path = statsite
+	url = https://github.com/armon/statsite.git

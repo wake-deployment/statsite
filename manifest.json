@@ -1,19 +1,13 @@
 {
   "platform": "make",
   "name": "statsite",
-  "owner": [
+  "owners": [
     "nathan.herald@microsoft.com"
   ],
-  "repos": {
-    "/opt/statsite": {
-      "url": "https://github.com/armon/statsite.git",
-      "sha": "v1.7.1"
-    }
-  },
-  "copy_source": true,
   "compile": [
-    "cd /opt/statsite/ && make && cp ./statsite /opt/app/",
-    "mkdir /opt/app/sinks && cp /opt/statsite/sinks/* /opt/app/sinks/"
+    "cp /opt/src/statsite.d /opt/app/",
+    "cd /opt/src/statsite/ && make && cp ./statsite /opt/app/",
+    "mkdir /opt/app/sinks && cp /opt/src/statsite/sinks/* /opt/app/sinks/"
   ],
   "processes": {
     "statsd": {
