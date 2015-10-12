@@ -13,8 +13,7 @@
     "statsd": {
       "cpu": 0,
       "memory": 0,
-      "chdir": "/opt/app",
-      "run": "./statsite -f statsite.d/statsite.ini"
+      "run": "/opt/app/statsite -f /opt/app/statsite.d/statsite.ini"
     }
   }
 }
