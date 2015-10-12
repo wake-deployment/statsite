@@ -5,23 +5,22 @@
     "nathan.herald@microsoft.com"
   ],
   "repos": {
-    "/opt/src": {
+    "/opt/statsite": {
       "url": "https://github.com/armon/statsite.git",
       "sha": "v1.7.1"
     }
   },
+  "copy_source": true,
   "compile": [
-    "cd /opt/src/ && make",
-    "cp /opt/src/statsite /opt/app/",
-    "mkdir /opt/app/sinks",
-    "cp /opt/src/sinks/* /opt/app/sinks/"
+    "cd /opt/statsite/ && make && cp ./statsite /opt/app/",
+    "mkdir /opt/app/sinks && cp /opt/statsite/sinks/* /opt/app/sinks/"
   ],
   "processes": {
     "statsd": {
       "cpu": 0,
       "memory": 0,
       "chdir": "/opt/app",
-      "run": "./statsite -f statsite.ini"
+      "run": "./statsite -f statsite.d/statsite.ini"
     }
   }
 }
