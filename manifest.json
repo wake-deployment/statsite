@@ -1,13 +1,8 @@
 {
-  "platform": "make",
+  "platform": "statsite",
   "name": "statsite",
   "owners": [
     "nathan.herald@microsoft.com"
-  ],
-  "compile": [
-    "cp -R /opt/src/statsite.d /opt/app/",
-    "cd /opt/src/statsite/ && make && cp ./statsite /opt/app/",
-    "mkdir /opt/app/sinks && cp /opt/src/statsite/sinks/* /opt/app/sinks/"
   ],
   "processes": {
     "statsd": {
