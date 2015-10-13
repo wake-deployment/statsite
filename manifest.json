@@ -1,6 +1,6 @@
 {
   "platform": "statsite",
-  "name": "statsite",
+  "app": "statsite",
   "owners": [
     "nathan.herald@microsoft.com"
   ],
@@ -8,7 +8,7 @@
     "statsd": {
       "cpu": 0,
       "memory": 0,
-      "run": "/opt/app/statsite -f /opt/app/statsite.d/statsite.ini"
+      "start": "/opt/app/statsite -f /opt/app/statsite.d/statsite.ini"
     }
   }
 }
