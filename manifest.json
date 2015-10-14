@@ -5,7 +5,7 @@
     "nathan.herald@microsoft.com"
   ],
   "processes": {
-    "statsd": {
+    "statsite": {
       "cpu": 0,
       "memory": 0,
       "start": "/opt/app/statsite -f /opt/app/statsite.d/statsite.ini"
