@@ -5,7 +5,7 @@ MAINTAINER Nathan Herald <nathan.herald@microsoft.com>
 ARG start
 ARG sha
 
-EXPOSE 8125
+EXPOSE 8125/udp
 
 RUN apt-get update \
  && mkdir /opt/app \
