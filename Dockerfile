@@ -5,6 +5,8 @@ MAINTAINER Nathan Herald <nathan.herald@microsoft.com>
 ARG start
 ARG sha
 
+EXPOSE 8125
+
 RUN apt-get update \
  && mkdir /opt/app \
  && mkdir /opt/src
